@@ -1,41 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>test</title>
+	<meta charset="UTF-8">
+	<title>原生 js 实现点击按钮复制文本</title>
+	<style type="text/css">
+	   .wrapper {position: relative;}
+	   #input {position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;}
+	</style>
 </head>
 <body>
-    <div>
-        <span id="copyMy"> 复制我试试</span>
-        <button onClick="copyFn()">点击复制</button>
+    <div class="wrapper">
+       <p id="text">我是需要复制的文本内容</p>
+       <textarea id="input">这是幕后黑手</textarea>
+       <button onclick="copyText()">copy</button>
     </div>
-
-<script>
-    function copyFn(){
-        var val = document.getElementById('copyMy');
-        window.getSelection().selectAllChildren(val);
-        document.execCommand ("Copy");
+</body>
+<script type="text/javascript">
+	function copyText() {
+        var text = document.getElementById("text").innerHTML;
+        var input = document.getElementById("input");
+        input.value = text;
+        input.select();//选中文本
+        document.execCommand("copy");
     }
 </script>
-</body>
-</html>Selection.selectAllChildren()<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>test</title>
-</head>
-<body>
-    <div>
-        <span id="copyMy"> 复制我试试</span>
-        <button onClick="copyFn()">点击复制</button>
-    </div>
-
-<script>
-    function copyFn(){
-        var val = document.getElementById('copyMy');
-        window.getSelection().selectAllChildren(val);
-        document.execCommand ("Copy");
-    }
-</script>
-</body>
 </html>
