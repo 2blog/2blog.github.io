@@ -1,7 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>RedCat | ✎ℳ𝓪𝓸</title>
+    <meta name="description" content="RedCat的个人网站，期待与更多的人相遇！">
+    <meta name="keywords" content="RedCat">
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0a91163570418838c7d5c57e01000828";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    <link rel="stylesheet" type="text/css" href="css/h.9c69ed6c.css">
+    <link rel="stylesheet" type="text/css" href="css/nekotora.99cf6f8c.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137340638-1"></script>
+    <script>function a() { dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], a("js", new Date), a("config", "UA-137340638-1");</script>
+    
+</head>
+
+<style>
+    .toast-bottom-center {
+        position: absolute;
+        left: 30px;
+        right: 10px;
+        top: 20px;
+    }
+</style>
 	
 	    <div class="find ch">
         <div class="container links">
@@ -86,27 +118,6 @@
             });
         }
     </script>
-	
-	<title>原生 js 实现点击按钮复制文本</title>
-	<style type="text/css">
-	   .wrapper {position: relative;}
-	   #input {position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;}
-	</style>
-</head>
-<body>
-    <div class="wrapper">
-       <p id="text">我是需要复制的文本内容</p>
-       <textarea id="input">这是幕后黑手</textarea>
-       <button onclick="copyText()">copy</button>
-    </div>
-</body>
-<script type="text/javascript">
-	function copyText() {
-        var text = document.getElementById("text").innerHTML;
-        var input = document.getElementById("input");
-        input.value = text;
-        input.select();//选中文本
-        document.execCommand("copy");
-    }
-</script>
+
+
 </html>
