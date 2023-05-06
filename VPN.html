@@ -118,6 +118,39 @@ var _hmt = _hmt || [];
             });
         }
     </script>
+    </script>
+            <div class="js-pjax">
+                <script>
+                    function subtitleType() {
+                        fetch('https://v1.hitokoto.cn').then(response=>response.json()).then(data=>{
+                            if (true) {
+                                var from = '出自 ' + data.from
+                                var sub = "".length == 0 ? new Array() : "".split(',')
+                                var both = sub.unshift(data.hitokoto, from)
+                                var typed = new Typed('#subtitle',{
+                                    strings: sub,
+                                    startDelay: 300,
+                                    typeSpeed: 150,
+                                    loop: true,
+                                    backSpeed: 50,
+                                })
+                            } else {
+                                document.getElementById('subtitle').innerHTML = data.hitokoto
+                            }
+                        }
+                        )
+                    }
+
+                    if (true) {
+                        if (typeof Typed === 'function') {
+                            subtitleType()
+                        } else {
+                            getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+                        }
+                    } else {
+                        subtitleType()
+                    }
+                </script>
             <!--底部波浪-->
             <div id="hans-bolang"></div><script src="https://api.vvhan.com/api/bolang"></script>
         </div>
