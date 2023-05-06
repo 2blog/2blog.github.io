@@ -63,7 +63,29 @@
             </div>
         </div>
     </div>
-	
+	    <script src="js/page.3a0791a3.js"></script>
+    <!--以下为点击复制调用js-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+    <script>
+        $('.copy-btn').click(function () {
+            let id = $(this).attr('id')
+            copy('#' + id)
+        })
+        function copy(id) {
+            let clipboard = new ClipboardJS(id);
+            clipboard.on('success', function (e) {
+                console.log(e);
+                alert('RedCat提醒：复制成功，请前往TV-VPN接口粘贴')
+                clipboard.destroy();//解决多次弹窗问题
+            });
+            clipboard.on('error', function (e) {
+                console.log(e);
+                alert('请重新复制')
+                clipboard.destroy();//解决多次弹窗问题
+            });
+        }
+    </script>
 	
 	<title>原生 js 实现点击按钮复制文本</title>
 	<style type="text/css">
