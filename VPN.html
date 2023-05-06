@@ -118,17 +118,28 @@ var _hmt = _hmt || [];
             });
         }
     </script>
+  <style>
+    /* 分别给图片和文字所在的标签设置 vertical-align:middle 即可实现 */
+    img {
+      width: 200px;
+      vertical-align: middle;                   在中间位置
+　　  /*　　vertical-align: text-top; */          在顶部
+　　　/*　vertical-align: text-bottom;  */        在底部
+    }
+  </style>
+</head>
 
 <body>
-    <div class="box">
-        <div class="box-bg">
-            <img src="https://jihulab.com/5ss/s-ssss-github-io/-/raw/main/logo/wx.png"" alt="" />
-        </div>
-        <div class="box-text">
-            <h4>虎门炮台</h4>
-            <p>东莞市虎门城区沙角山</p>
-        </div>
-    </div>
+
+  <!-- 标签元素 -->
+  <div class="box">
+    <img src="https://jihulab.com/5ss/s-ssss-github-io/-/raw/main/logo/wx.png" alt="">
+    <span>防失联请关注公众号RedCat</span>
+  </div>
+
+
 </body>
+
+
 
 </html>
